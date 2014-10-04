@@ -1,0 +1,99 @@
+% Default course lecture note template by asp 
+\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[top=3cm, bottom=3cm, left=3.85cm, right=3.85cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath,amssymb,wasysym,amsthm}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage{hyperref}
+\usepackage{gitinfo}
+\usepackage[usenames,dvipsnames]{color}
+
+\title{Bitcoin Incentives}
+\author{Andrew Poelstra}
+\author{Bryan Bishop}
+\date{\gitAuthorDate{} (commit \texttt{\gitAbbrevHash)}}
+
+\begin{document}
+
+\maketitle
+
+\paragraph{Status.} This document is a work in progress and is missing large
+sections of text. Bug reports should be communicated at
+\url{https://github.com/kanzure/bitcoin-incentives}.
+
+\section{Introduction}
+
+Here is an enumeration of various incentives that exist in the Bitcoin software
+and p2p network. Some of these incentives are much stronger than others, but a
+rating scheme or ordering scheme has yet to be devised. Additionally, some have
+been observed in action in the wild, while others are more obscure and only
+notable in very specific circumstances.
+
+\section{Incentive}
+
+An incentive is what happens when a giant entropy monster reaches out and grabs
+you.
+
+\section{Incentives}
+
+\begin{enumerate}
+\item Block subsidy incentive to miners for every block they mine.
+
+\item Block transaction fees provide an incentive for miners to mine blocks.
+
+\item Miner transaction fee incentive is somewhat limited by the byte size of
+each transaction.
+
+\item Miners have an incentive to publish blocks as quickly as possible because
+of the lottery race they participate in against other miners who may also have
+a valid block, or who may soon find a block.
+
+\item Miners have an incentive to limit the size of their blocks so as to
+minimize the time it takes for their block to saturate the network or reach
+every node in the p2p network.
+
+\item Various vague incentives about miners including any transaction, because
+of the benefit of providing a working system, compared to rejecting the
+majority of transactions and losing users that might pay transaction fees or
+pay to other users that might pay transaction fees.
+
+\item Miners have an incentive to include transactions with high fees not only
+because "more money is good" but also because it removes the pool of available
+transaction fees that other miners could benefit from.
+
+\item Users have an incentive to include transaction fees to get transactions
+processed faster than "normal". (?)
+
+\item Incentives to provide accurate timestamps.
+
+\item Incentives to relay transactions.
+
+\item Incentives to relay blocks.
+
+\item Incentives to verify transactions.
+
+\item Incentives to maintain a mempool.
+
+\item Incentives to not relay certain transactions.
+
+\item Incentives to switch between forks.
+
+\item Incentives to not switch between forks.
+
+\item Incentives to broadcast blocks once found.
+
+\item Incentives to provide initial block downloads.
+
+\end{enumerate}
+
+\section{Conclusion}
+
+\begin{thebibliography}
+\bibitem{satoshi} \url{https://www.bitcoin.org/bitcoin.pdf}
+\end{thebibliography}
+
+\end{document}
