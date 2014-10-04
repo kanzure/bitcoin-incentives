@@ -69,7 +69,15 @@ transaction fees that other miners could benefit from.
 \item Users have an incentive to include transaction fees to get transactions
 processed faster than "normal". (?)
 
-\item Incentives to provide accurate timestamps.
+\item Incentives to provide accurate timestamps. These are roughly:
+\begin{enumerate}
+\item Not doing this has nearly no benefit: only every 2016th block affects the
+difficulty, and if the timestamp is wrong by more than 2 hours then other nodes
+won't relay the block (so maximum ``safe'' skew is 0.60\%).
+\item Because other have inaccurate clocks, any skew will increase the risk that
+your block is not relayed. (Though we do observe in fact blocks with wildly wrong
+timestamps, so this is apparently not a concern in practice.)
+\end{enumerate}
 
 \item Incentives to relay transactions.
 
