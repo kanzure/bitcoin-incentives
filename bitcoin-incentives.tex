@@ -68,7 +68,9 @@ well as a variety of other amusing failure modes.
 a p2p network, especially when the existing nodes on the network are already
 programmed to accept new incoming connections from unknowns.
 
-\section{Satoshi's Byzantine Generals' Problem}
+\section{Preliminaries}
+
+\subsection{Satoshi's Byzantine Generals' Problem}
 
 (This wording is based on \url{http://bitcoin.org/byzantine.html} originally.)
 
@@ -105,6 +107,15 @@ to produce in the allotted time. At the least, most of them had to have seen
 the plan, since the proof-of-work is proof that they worked on it. If the CPU
 power exhibited by the proof-of-work is sufficient to crack the password, they
 can safely attack at the agreed time.
+
+\subsection{Maaku's Physical Explanation of Bitcoin and Proof-of-Work}
+
+Proof-of-Work works because of the economic restriction provided by the second
+law of thermodynamics. Even though you can't know you're in the consensus set,
+you can put a raw economic cost on the probability of you being tricked.
+Bitcoin uses proof-of-work to tie Bitcoin consensus to a fundamentally scarce
+resource, entropy. It is possible to use another physically scarce resource
+instead, but there is no alternative to the universal scarcity of entropy.
 
 \section{Incentives}
 
