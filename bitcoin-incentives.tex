@@ -28,6 +28,21 @@ there's no incentive except for the virtual currency payments, and yet the
 value of the virtual currency payments only matters if it's secure, and it's
 only secure if the incentive mechanism works....." - Andrew Miller
 
+Bitcoin is a novel p2p phenomenon which includes a decentralized
+consensus-derived history of transactions. The way to confirm the absence of a
+prior transaction is to have the entire history of prior transactions. However,
+the presence of physical reality imposes various constraints on system design
+and operation. There are many histories being generated simultaneously
+everywhere in the universe with the usual passage of time. The synchronization
+of these histories cannot happen faster than the communication latency of a
+system, nor faster than the speed of light anyway. For these reasons and
+others, possessing all recent transaction history "in real time" is problematic
+or impossible. Bitcoin provides some rules and incentives for maintaining a
+consensus history under these physical constraints. A complete mechanical or
+physical understanding of Bitcoin has yet to be introduced and is not offered
+here. This document focuses on an enumeration of incentives and constraints
+involved in Bitcoin.
+
 Here is an enumeration of various incentives that exist in the Bitcoin software
 and p2p network.
 
@@ -63,6 +78,8 @@ well as a variety of other amusing failure modes.
 \paragraph{Sybil attack} An adversary can endlessly create misbehaving nodes in
 a p2p network, especially when the existing nodes on the network are already
 programmed to accept new incoming connections from unknowns.
+
+\paragraph{p2p} Peer-to-peer.
 
 \section{Preliminaries}
 
