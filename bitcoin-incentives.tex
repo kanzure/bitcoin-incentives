@@ -181,6 +181,13 @@ timestamps, so this is apparently not a concern in practice.)
 
 \item Incentives to not relay certain transactions.
 
+\item Miners have incentives to relay or forward transactions because blocks
+will propagate faster to miners who have already seen, downloaded, verified the
+transactions.
+
+\item Miners have incentives not to relay or forward transactions with high mining fees
+to prevent other miners from claiming those fees.
+
 \item Incentives to switch between forks.
 
 \item Incentives to not switch between forks.
@@ -193,6 +200,26 @@ timestamps, so this is apparently not a concern in practice.)
 offline miners, which means 'dark hashpower'. A bubble can result in miners
 overbuying, anticipating a sellout at much higher prices, which can also affect
 the mining ecosystem when the bubble doesn't reach the anticipated heights.
+
+\item Ignoring the value of the incentive to keep the network valuable by not
+forcing an unexpected reorg, miners don't have an incentive to try and take a
+previous blocks fee unless the expected value of mining the old block is higher
+than mining the new block. This can happen when the miner has a high enough
+hash rate, or the current blocks tx fee sum is low enough, or an obscure
+scenario where the difficulty has fallen dramatically over a very long period
+of time that was elaborated in some paper (reference forthcoming). But if a
+miner has 10\% of the hashrate then it is probably worth it (ignoring devaluing
+the network) to try and mine the previous block again, especially if the
+previous block had 100 BTC in fees rather than the current block which might an
+order of magnitude less in transaction fees. With only 0.001\% of the hashrate
+a miner has significantly less chance of getting the previous block anyway, and
+it's probably not worth it.
+
+\item Miners have an incentive to preserve transaction ordering during reorgs
+they propose, especially for particularly "deep" reorgs. Possibly the incentive
+is even stronger the further back in time the reorg goes. This is mostly
+related to maintaining a high quality of service for other network
+participants.
 
 \end{enumerate}
 
